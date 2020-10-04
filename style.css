@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css?family=Niconne&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Teko:300,400&display=swap");
+
+:root {
+  --golden: #c69963;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header */
+header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  height: 100vh;
+  font-family: Roboto, sans-serif;
+  min-width: 408px;
+  color: #fff;
+}
+
+header > .container {
+  height: 100%;
+  background: linear-gradient(rgba(16, 29, 44, 0.95), rgba(16, 29, 44, 0.95)),
+    url(./images/header-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.brand-logo img {
+  width: 9.5em;
+  height: 9.5em;
+  position: absolute;
+  top: 5px;
+  left: 10%;
+}
+
+.brand-logo {
+  transition: opacity 0.5s;
+}
+
+.brand-logo:hover {
+  opacity: 0.7;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 25px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  background: #101d2c;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-menu i {
+  font-size: 30px;
+  color: rgba(198, 153, 99, 0.7);
+  margin: auto;
+}
+
+.hamburger-menu .fa-times {
+  display: none;
+}
+
+.hamburger-menu .fa-times.open {
+  display: block;
+}
+
+.hamburger-menu .fa-bars.open {
+  display: none;
+}
+
+.navbar {
+  position: absolute;
+  right: 10%;
+  top: 12%;
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+
+li.navbar__item {
+  list-style-type: none;
+  position: relative;
+}
+
+li.navbar__item::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #c69963;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 650ms;
+}
+
+li.navbar__item:hover::before {
+  transform: scale(1);
+}
+
+li.navbar__item a {
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.header__title {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+}
+
+.header__title p:first-child {
+  font-size: 3.5em;
+  font-family: "Niconne", sans-serif;
+  color: var(--golden);
+}
+
+.header__title > * + * {
+  margin-top: 1em;
+}
+
+.header__title p:nth-of-type(2) {
+  font-size: 1.1em;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 1em;
+  background: transparent;
+  width: 150px;
+  padding: 10px 30px;
+  border: 1px solid rgb(153, 144, 144);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.header__title a:nth-of-type(2) {
+  margin-left: 20px;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(225, 225, 225, 0.3),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.header__title a:hover .btn::before {
+  right: -100%;
+}
+
+/* about */
+main {
+  height: auto;
+}
+
+.about {
+  height: 100vh;
+  width: 100%;
+}
+
+.about > .container {
+  height: 100%;
+  padding: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.about__content {
+  color: black;
+  width: 50%;
+  height: 60vh;
+}
+
+.about__content:first-child {
+  font-family: "Teko", sans-serif;
+  font-size: 25px;
+  color: #101d2c;
+  letter-spacing: 1px;
+}
+.about__content p:nth-of-type(2) {
+  font-family: "Niconne", cursive;
+  color: #c69963;
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+.about__content p:nth-of-type(3) {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+}
+.about__content > * {
+  margin-top: 20px;
+}
+
+.about__btn {
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  margin-top: 1.5em;
+  background: transparent;
+  font-size: 0.65em;
+  width: 150px;
+  color: #c69963;
+  height: 2.5em;
+  padding: 10px;
+  border: 1px solid #c69963;
+  transition: all 650ms;
+}
+
+.about__btn:hover {
+  background: #c69963;
+  color: #fff;
+}
+
+.about__image {
+  width: 50%;
+  height: 80vh;
+}
+
+.about__image img {
+  height: 100%;
+  width: 100%;
+}
+
+/* menu */
+
+.menu > .container {
+  height: 100%;
+  width: 100%;
+  padding: 2em 0;
+  background-color: #101d2c;
+}
+
+.shop-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 3em;
+}
+
+.shop-info i {
+  font-size: 3em;
+  color: #c69963;
+}
+
+p.shopInfo__heading {
+  font-family: "Teko", sans-serif;
+  font-size: 1.5em;
+  color: #fff !important;
+}
+
+.shop-info p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hours,
+.location,
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.hours div,
+.location div,
+.contact div {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+.shop-info {
+  border-bottom: 0.15px solid #212529;
+}
+
+div.menu-list {
+  padding: 2em;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.menu-list > p {
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+.menu-list > p:first-child {
+  font-family: "Teko", sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.menu-list > p:nth-of-type(2) {
+  font-family: "Niconne", cursive;
+  color: #c69963 !important;
+  font-size: 3.5em;
+}
+
+.food-items {
+  margin: 2em auto;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 15em;
+}
+.food-items > div {
+  position: relative;
+}
+.price-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5em;
+  position: relative;
+}
+.price-block > * {
+  width: 150px;
+}
+.price-block p:nth-of-type(1) {
+  color: #c69963;
+  text-align: left;
+}
+.price-block p:nth-of-type(2) {
+  font-family: "Teko", sans-serif;
+  color: #000;
+  font-size: 1em;
+  text-align: left;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.price-block button {
+  margin-top: 10px;
+  cursor: pointer;
+  background: #c69963;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 12px;
+  position: relative;
+  overflow: hidden;
+}
+.price-block button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 100%;
+  background: linear-gradient(
+    30deg,
+    transparent,
+    rgba(225, 225, 225, 0.5),
+    transparent
+  );
+  transition: all 650ms;
+}
+.price-block button:hover::before {
+  transform: translateX(200%);
+}
+.price-block > button a {
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+}
+.price-block.left::before,
+.price-block.right::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: white;
+  top: 50%;
+  z-index: 10;
+}
+.price-block.left::before {
+  left: 0;
+  transform: translateX(-50%) rotate(45deg);
+}
+.price-block.right::before {
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+}
+.food-items img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.chefs {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5%;
+}
+
+.chefs > .container {
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chefs p:nth-of-type(1) {
+  font-family: "Teko", sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 1.5em;
+}
+
+.chefs p:nth-of-type(2) {
+  font-family: "Niconne", cursive;
+  color: #c69963 !important;
+  font-size: 3.5em;
+  text-transform: capitalize;
+}
+
+.chefs .chefs__img {
+  margin-top: 5%;
+  height: 60%;
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-auto-rows: auto;
+  grid-gap: 1.5em;
+}
+
+.chefs__img img {
+  height: 100%;
+  width: 100%;
+}
+.chefs__img > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.chefs__img > div > * {
+  padding-top: 10px;
+}
+.chefs .chef-name {
+  font-family: "Teko", sans-serif;
+  font-weight: 100;
+  font-size: 1.5em;
+  letter-spacing: 2.5px;
+}
+.chefs .chef-area {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #c69963;
+  font-size: 1em;
+}
+.chefs .chef-desc {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+/* footer */
+footer {
+  margin-top: 10%;
+  height: 20vh;
+  width: 100%;
+  background: #101d2c;
+  color: #939597;
+  font-size: 0.9em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  nav {
+    transform: scale(0);
+  }
+  .hamburger-menu {
+    transform: scale(1);
+  }
+  nav.open {
+    transform: scale(1);
+    z-index: 900;
+    background: #101d2c;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+  }
+  nav.open .navbar {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav.open li.navbar__item::before {
+    transform: scale(0);
+  }
+
+  .about {
+    height: max-content;
+    text-align: center;
+  }
+
+  .about .container {
+    flex-direction: column;
+  }
+  .about__content {
+    height: max-content;
+    margin-top: 10%;
+    width: 100%;
+  }
+  .about__image {
+    width: 100%;
+    height: 100%;
+  }
+  .about__btn {
+    margin: auto;
+  }
+  .shop-info {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .food-items {
+    grid-template-columns: repeat(auto-fit, 1fr 1fr);
+  }
+
+  .chefs__img img {
+    height: 70%;
+  }
+  footer {
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 700px) {
+  .chefs__img img {
+    height: 50%;
+  }
+  footer {
+    margin-top: 2%;
+  }
+}
+@media (max-width: 680px) {
+  .price-block.left::before,
+  .price-block.right::before {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .hamburger-menu {
+    transform: scale(0);
+  }
+}
